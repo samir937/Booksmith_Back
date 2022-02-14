@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.bookstore.entity.Book;
@@ -12,6 +14,7 @@ import com.example.bookstore.service.BookService;
 
 @RestController
 public class BookController {
+	
 	@Autowired
 	BookService bookservice;
 	
@@ -22,5 +25,12 @@ public class BookController {
 		
 		return ResponseEntity.ok(books);
 	}
+	
+	@PostMapping("/books/list")
+	public void addBook(@RequestBody Book bookData)
+	{
+		bookservice.addBook(bookData);
+	}
+	
 
 }
