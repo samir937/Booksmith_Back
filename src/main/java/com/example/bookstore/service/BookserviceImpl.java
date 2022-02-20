@@ -29,4 +29,10 @@ public class BookserviceImpl implements BookService{
 		repo.save(bookData);
 	}
 
+	@Override
+	public void deleteBook(int id) {
+		repo.deleteById(id);
+		
+	}
+
 }

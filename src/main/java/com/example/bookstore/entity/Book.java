@@ -35,7 +35,6 @@ public class Book {
 		return BookName;
 	}
 
-
 	public void setBookName(String bookName) {
 		BookName = bookName;
 	}

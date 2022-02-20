@@ -9,4 +9,6 @@ public interface BookService {
 	public List<Book> getBookList();
 
 	public void addBook(Book bookData);
+
+	public void deleteBook(int id);
 }
