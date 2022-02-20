@@ -35,4 +35,14 @@ public class BookserviceImpl implements BookService{
 		
 	}
 
+
+	@Override
+	public Book findBook(int id) {
+		// TODO Auto-generated method stub
+		Book book=repo.findById(id).get();
+		return book ;
+	}
+	
+	
+
 }

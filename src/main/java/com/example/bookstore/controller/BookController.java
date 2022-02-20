@@ -28,6 +28,14 @@ public class BookController {
 		return ResponseEntity.ok(books);
 	}
 	
+	@GetMapping("/book/{id}")
+	public Book findBook(@PathVariable int id)
+	{
+		Book book=bookservice.findBook(id);
+		return book;
+		
+	}
+	
 	@PostMapping("/books/list")
 	public void addBook(@RequestBody Book bookData)
 	{
@@ -39,5 +47,6 @@ public class BookController {
 	{
 		bookservice.deleteBook(id);
 	}
+	
 
 }
