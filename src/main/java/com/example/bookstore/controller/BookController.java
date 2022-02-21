@@ -16,7 +16,7 @@ import com.example.bookstore.entity.Book;
 import com.example.bookstore.service.BookService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin("https://booksmith-library.herokuapp.com")
 public class BookController {
 	
 	@Autowired
