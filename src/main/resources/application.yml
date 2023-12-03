@@ -1,0 +1,16 @@
+resilience4j:
+  rate-limiter:
+    instances:
+      bookRateLimiter:
+        limit-refresh-period: 4s
+        limit-for-period: 2
+        timeout-duration: 0s
+spring:
+  redis:
+    host: localhost
+    port: 6379
+  cache:
+    type: redis
+    redis:
+      time-to-live: 60000
+
